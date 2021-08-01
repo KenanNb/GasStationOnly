@@ -1,0 +1,15 @@
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\bin\Debug\GasStationOnly.exe.config
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\bin\Debug\GasStationOnly.exe
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\bin\Debug\GasStationOnly.pdb
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\bin\Debug\EntityFramework.dll
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\bin\Debug\EntityFramework.xml
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\obj\Debug\GasStationOnly.csproj.AssemblyReference.cache
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\obj\Debug\GasStationOnly.Properties.Resources.resources
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\obj\Debug\GasStationOnly.MainView.resources
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\obj\Debug\GasStationOnly.csproj.GenerateResource.cache
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\obj\Debug\GasStationOnly.csproj.CoreCompileInputs.cache
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\obj\Debug\GasStationOnly.csproj.CopyComplete
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\obj\Debug\GasStationOnly.exe
+C:\Users\Kənan\source\repos\GasStationOnly\GasStationOnly\obj\Debug\GasStationOnly.pdb
