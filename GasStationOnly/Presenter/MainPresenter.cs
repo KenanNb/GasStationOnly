@@ -22,26 +22,34 @@ namespace GasStationOnly.Presenter
         }
         private void PayButtonClicked(object sender,EventArgs e)
         {
-            int fprice = 0;
-            if (_view.SumText == "")
+          
+            if (_view.IsAmount)
             {
-                fprice = int.Parse(_view.PriceText) * int.Parse(_view.AmountText);
-            }
-            else
-            {
-                 fprice = int.Parse(_view.SumText);
-            }
             GassStation gassStation = new GassStation
             {
                 Gasoline = _view.GasolineText,
                 Price = int.Parse(_view.PriceText),
                 Time = DateTime.Now,
-                Amount = int.Parse(_view.AmountText),
-                Sum = int.Parse(_view.SumText),
-                PrePrice = fprice
+                Amount = int.Parse(_view.AmountText),                
+                PrePrice = int.Parse(_view.PriceText) * int.Parse(_view.AmountText)
             };
             _db.GassStations.Add(gassStation);
             _db.SaveChanges();
+            }
+            else
+            {
+                GassStation gassStation = new GassStation
+                {
+                    Gasoline = _view.GasolineText,
+                    Price = int.Parse(_view.PriceText),
+                    Time = DateTime.Now,
+                   Sum = int.Parse(_view.SumText),
+
+                    PrePrice = int.Parse(_view.SumText)
+                };
+                _db.GassStations.Add(gassStation);
+                _db.SaveChanges();
+            }
         }
         private void LoadPaymentsButton(object sender, EventArgs e)
         {

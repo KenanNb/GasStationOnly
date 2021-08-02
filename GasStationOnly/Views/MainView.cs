@@ -20,7 +20,7 @@ namespace GasStationOnly
             List<string> octanes = new List<string>
             {
                 "92",
-                "94",
+                "95",
                 "gass"
             };
             gasolineComboBox.DataSource = octanes;
@@ -41,6 +41,7 @@ namespace GasStationOnly
         public string AmountText { get => amountTxtb.Text; set => amountTxtb.Text = value; }
         public string SumText { get => sumTxtb.Text; set => sumTxtb.Text = value; }
         public string PrePriceText { get => totalPaymentTxtb.Text; set => totalPaymentTxtb.Text = value; }
+        public bool IsAmount { get => amountRbtn.Checked; set => amountRbtn.Checked=value; }
 
         private void payBtn_Click(object sender, EventArgs e)
         {
@@ -74,8 +75,9 @@ namespace GasStationOnly
             sumTxtb.Enabled = true;
             amountTxtb.Enabled = false;
             amountTxtb.Text = "";
-            TimeTxtb.Enabled = false;
+            TimeTxtb.Enabled = false;            
             totalPaymentTxtb.Enabled = false;
+
             if (sumRbtn.Checked)
             {
                 sumRbtn.ForeColor = Color.SpringGreen;
@@ -92,7 +94,7 @@ namespace GasStationOnly
             if (sb == "92") {
                 priceTxtb.Text = "1";
             }
-            else if(sb == "94")
+            else if(sb == "95")
             {
                 priceTxtb.Text = "1.45";
             }

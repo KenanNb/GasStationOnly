@@ -14,6 +14,7 @@ namespace GasStationOnly.Views
         List<GassStation> GassStations { set; }
         string GasolineText { get; set; }
         string PriceText { get; set; }
+        bool IsAmount { get; set; }
         string TimeText { get; set; }
         string AmountText { get; set; }
         string SumText { get; set; }
