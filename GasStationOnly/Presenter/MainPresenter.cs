@@ -28,25 +28,28 @@ namespace GasStationOnly.Presenter
             GassStation gassStation = new GassStation
             {
                 Gasoline = _view.GasolineText,
-                Price = int.Parse(_view.PriceText),
+                Price = decimal.Parse(_view.PriceText),
                 Time = DateTime.Now,
-                Amount = int.Parse(_view.AmountText),                
-                PrePrice = int.Parse(_view.PriceText) * int.Parse(_view.AmountText)
+                Amount = decimal.Parse(_view.AmountText),                
+                PrePrice = decimal.Parse(_view.PriceText) * decimal.Parse(_view.AmountText)
+                
             };
+             _view.TimeText = DateTime.Now.ToString();
             _db.GassStations.Add(gassStation);
-            _db.SaveChanges();
+            _db.SaveChanges(); 
             }
             else
             {
                 GassStation gassStation = new GassStation
                 {
                     Gasoline = _view.GasolineText,
-                    Price = int.Parse(_view.PriceText),
+                    Price = decimal.Parse(_view.PriceText),
                     Time = DateTime.Now,
-                   Sum = int.Parse(_view.SumText),
-
-                    PrePrice = int.Parse(_view.SumText)
+                   Sum = decimal.Parse(_view.SumText),
+                    Amount = decimal.Parse(_view.SumText) / decimal.Parse(_view.PriceText),
+                    PrePrice = decimal.Parse(_view.SumText)
                 };
+                _view.TimeText = DateTime.Now.ToString();
                 _db.GassStations.Add(gassStation);
                 _db.SaveChanges();
             }
