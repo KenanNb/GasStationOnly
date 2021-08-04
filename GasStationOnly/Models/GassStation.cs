@@ -10,11 +10,11 @@ namespace GasStationOnly.Models
     {
         public int GassStationId { get; set; }
         public string Gasoline { get; set; }
-        public decimal Price { get; set; }
+        public int Price { get; set; }
         public DateTime Time { get; set; }
-        public decimal Amount { get; set; }
-        public decimal Sum { get; set; }
-        public decimal PrePrice { get; set; }
+        public int Amount { get; set; }
+        public int Sum { get; set; }
+        public int PrePrice { get; set; }
        
         public override string ToString()
         {

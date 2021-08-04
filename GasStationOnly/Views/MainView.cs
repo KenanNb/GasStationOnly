@@ -103,5 +103,16 @@ namespace GasStationOnly
                 priceTxtb.Text = "0.8";
             }
         }
+
+        private void amountTxtb_TextChanged(object sender, EventArgs e)
+        {
+            decimal total = decimal.Parse(priceTxtb.Text) * decimal.Parse(amountTxtb.Text);
+            totalPaymentTxtb.Text = total.ToString();
+        }
+
+        private void sumTxtb_TextChanged(object sender, EventArgs e)
+        {
+            totalPaymentTxtb.Text = sumTxtb.Text;
+        }
     }
 }

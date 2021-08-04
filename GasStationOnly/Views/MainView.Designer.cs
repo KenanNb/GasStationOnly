@@ -30,6 +30,11 @@ namespace GasStationOnly
         private void InitializeComponent()
         {
             this.gassStationGrbx = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.TimeTxtb = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.totalPaymentTxtb = new System.Windows.Forms.TextBox();
+            this.payBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sumTxtb = new System.Windows.Forms.TextBox();
@@ -42,15 +47,10 @@ namespace GasStationOnly
             this.label1 = new System.Windows.Forms.Label();
             this.gasolineComboBox = new System.Windows.Forms.ComboBox();
             this.AllPaymentsListbox = new System.Windows.Forms.ListBox();
-            this.payBtn = new System.Windows.Forms.Button();
-            this.totalPaymentTxtb = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.loadPaymentsBtn = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TimeTxtb = new System.Windows.Forms.TextBox();
             this.gassStationGrbx.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gassStationGrbx
@@ -73,6 +73,54 @@ namespace GasStationOnly
             this.gassStationGrbx.TabIndex = 0;
             this.gassStationGrbx.TabStop = false;
             this.gassStationGrbx.Text = "Gass Station";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.TimeTxtb);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.totalPaymentTxtb);
+            this.groupBox3.Location = new System.Drawing.Point(6, 231);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(151, 138);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Total Payment";
+            // 
+            // TimeTxtb
+            // 
+            this.TimeTxtb.Location = new System.Drawing.Point(20, 93);
+            this.TimeTxtb.Name = "TimeTxtb";
+            this.TimeTxtb.Size = new System.Drawing.Size(100, 26);
+            this.TimeTxtb.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(121, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Payment Time";
+            // 
+            // totalPaymentTxtb
+            // 
+            this.totalPaymentTxtb.Location = new System.Drawing.Point(25, 19);
+            this.totalPaymentTxtb.Name = "totalPaymentTxtb";
+            this.totalPaymentTxtb.Size = new System.Drawing.Size(100, 26);
+            this.totalPaymentTxtb.TabIndex = 10;
+            this.totalPaymentTxtb.Text = "0";
+            // 
+            // payBtn
+            // 
+            this.payBtn.AutoSize = true;
+            this.payBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payBtn.Location = new System.Drawing.Point(188, 272);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.Size = new System.Drawing.Size(100, 35);
+            this.payBtn.TabIndex = 9;
+            this.payBtn.Text = "Pay";
+            this.payBtn.UseVisualStyleBackColor = true;
+            this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
             // 
             // label4
             // 
@@ -98,6 +146,7 @@ namespace GasStationOnly
             this.sumTxtb.Name = "sumTxtb";
             this.sumTxtb.Size = new System.Drawing.Size(100, 26);
             this.sumTxtb.TabIndex = 6;
+            this.sumTxtb.TextChanged += new System.EventHandler(this.sumTxtb_TextChanged);
             // 
             // amountTxtb
             // 
@@ -105,6 +154,7 @@ namespace GasStationOnly
             this.amountTxtb.Name = "amountTxtb";
             this.amountTxtb.Size = new System.Drawing.Size(100, 26);
             this.amountTxtb.TabIndex = 5;
+            this.amountTxtb.TextChanged += new System.EventHandler(this.amountTxtb_TextChanged);
             // 
             // groupBox2
             // 
@@ -187,38 +237,6 @@ namespace GasStationOnly
             this.AllPaymentsListbox.Size = new System.Drawing.Size(239, 204);
             this.AllPaymentsListbox.TabIndex = 1;
             // 
-            // payBtn
-            // 
-            this.payBtn.AutoSize = true;
-            this.payBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payBtn.Location = new System.Drawing.Point(188, 272);
-            this.payBtn.Name = "payBtn";
-            this.payBtn.Size = new System.Drawing.Size(100, 35);
-            this.payBtn.TabIndex = 9;
-            this.payBtn.Text = "Pay";
-            this.payBtn.UseVisualStyleBackColor = true;
-            this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
-            // 
-            // totalPaymentTxtb
-            // 
-            this.totalPaymentTxtb.Location = new System.Drawing.Point(25, 19);
-            this.totalPaymentTxtb.Name = "totalPaymentTxtb";
-            this.totalPaymentTxtb.Size = new System.Drawing.Size(100, 26);
-            this.totalPaymentTxtb.TabIndex = 10;
-            this.totalPaymentTxtb.Text = "0";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.TimeTxtb);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.totalPaymentTxtb);
-            this.groupBox3.Location = new System.Drawing.Point(6, 231);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(151, 138);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Total Payment";
-            // 
             // loadPaymentsBtn
             // 
             this.loadPaymentsBtn.AutoSize = true;
@@ -230,22 +248,6 @@ namespace GasStationOnly
             this.loadPaymentsBtn.Text = "Load Payments";
             this.loadPaymentsBtn.UseVisualStyleBackColor = true;
             this.loadPaymentsBtn.Click += new System.EventHandler(this.loadPaymentsBtn_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Payment Time";
-            // 
-            // TimeTxtb
-            // 
-            this.TimeTxtb.Location = new System.Drawing.Point(20, 93);
-            this.TimeTxtb.Name = "TimeTxtb";
-            this.TimeTxtb.Size = new System.Drawing.Size(100, 26);
-            this.TimeTxtb.TabIndex = 14;
             // 
             // MainView
             // 
@@ -259,10 +261,10 @@ namespace GasStationOnly
             this.Text = "Form1";
             this.gassStationGrbx.ResumeLayout(false);
             this.gassStationGrbx.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

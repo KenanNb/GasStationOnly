@@ -28,10 +28,10 @@ namespace GasStationOnly.Presenter
             GassStation gassStation = new GassStation
             {
                 Gasoline = _view.GasolineText,
-                Price = decimal.Parse(_view.PriceText),
+                Price = int.Parse(_view.PriceText),
                 Time = DateTime.Now,
-                Amount = decimal.Parse(_view.AmountText),                
-                PrePrice = decimal.Parse(_view.PriceText) * decimal.Parse(_view.AmountText)
+                Amount = int.Parse(_view.AmountText),                
+                PrePrice = int.Parse(_view.PriceText) * int.Parse(_view.AmountText)
                 
             };
              _view.TimeText = DateTime.Now.ToString();
@@ -43,11 +43,11 @@ namespace GasStationOnly.Presenter
                 GassStation gassStation = new GassStation
                 {
                     Gasoline = _view.GasolineText,
-                    Price = decimal.Parse(_view.PriceText),
+                    Price = int.Parse(_view.PriceText),
                     Time = DateTime.Now,
-                   Sum = decimal.Parse(_view.SumText),
-                    Amount = decimal.Parse(_view.SumText) / decimal.Parse(_view.PriceText),
-                    PrePrice = decimal.Parse(_view.SumText)
+                   Sum = int.Parse(_view.SumText),
+                    Amount = int.Parse(_view.SumText) / int.Parse(_view.PriceText),
+                    PrePrice = int.Parse(_view.SumText)
                 };
                 _view.TimeText = DateTime.Now.ToString();
                 _db.GassStations.Add(gassStation);
